@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UDHAR App</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+
+ <!-- LOADING SCREEN  -->
+  <div class="loading-screen">
+    <div class="loading-box">
+      <img src="udhar.jpg" alt="Game Image" class="loading-img">
+      <h1 class="game-title">U D H A R</h1>
+      <div class="loader"></div>
+      <p class="loading-text">Loading...</p>
+    </div>
+  </div>
+<!-- Greeting box -->
+<div class="content">
+  <div class="greeting-box">
+    <h1>UDHAR</h1>
+    
+    <h2 id="greeting"></h2>
+    <p id="shopOwner"></p>
+    <p id="todayDate"></p>
+  </div>
+
+  <div class="today-history-box">
+    <h3>Today's Transactions</h3>
+    <div id="todayList">
+      <p>No transactions today</p>
+    </div>
+  </div>
+</div>
+<!-- Footer icons -->
+<footer class="footer">
+  <i id="addBtn" class="fa-solid fa-plus"></i>
+  <i id="deductBtn" class="fa-solid fa-minus"></i>
+  <i id="historyBtn" class="fa-solid fa-clock-rotate-left"></i>
+  <i id="personsBtn" class="fa-solid fa-users"></i>
+  <i id="settingsBtn" class="fa-solid fa-gear"></i>
+</footer>
+
+<!-- ADD POPUP -->
+<div class="popup" id="addPopup">
+  <div class="popup-box">
+    <span class="close" data-popup="addPopup">&times;</span>
+    <h2>Add Money</h2>
+    <input id="addName" placeholder="Name">
+    <input id="addAmount" type="number" placeholder="Amount">
+    <button id="saveAdd">Add</button>
+  </div>
+</div>
+
+<!-- DEDUCT POPUP -->
+<div class="popup" id="deductPopup">
+  <div class="popup-box">
+    <span class="close" data-popup="deductPopup">&times;</span>
+    <h2>Deduct Money</h2>
+    <input id="deductName" placeholder="Name">
+    <input id="deductAmount" type="number" placeholder="Amount">
+    <button id="saveDeduct">Deduct</button>
+  </div>
+</div>
+
+<!-- HISTORY POPUP -->
+<div class="popup" id="historyPopup">
+  <div class="popup-box">
+    <span class="close" data-popup="historyPopup">&times;</span>
+    <h2>History</h2>
+    <div id="historyList"></div>
+  </div>
+</div>
+
+<!-- PERSONS POPUP -->
+<div class="popup" id="personsPopup">
+  <div class="popup-box">
+    <span class="close" data-popup="personsPopup">&times;</span>
+    <h2>Persons</h2>
+    <button id="addPersonBtn">Add Person</button>
+    <div id="personsList"></div>
+  </div>
+</div>
+<!-- PERSON INFO POPUP -->
+<div class="popup" id="personInfoPopup">
+  <div class="popup-box">
+    <span class="close" data-popup="personInfoPopup">&times;</span>
+    <h2>Person Info</h2>
+    <p id="personInfoName">Name: </p>
+    <p id="personInfoPhone">Phone: </p>
+    <p id="personInfoBalance">Balance: </p>
+  </div>
+</div>
+
+<!-- ADD PERSON POPUP -->
+<div class="popup" id="personPopup">
+  <div class="popup-box">
+    <span class="close" data-popup="personPopup">&times;</span>
+    <h2>Add Person</h2>
+    <input id="personName" placeholder="Name">
+    <input id="personPhone" placeholder="Phone">
+    <button id="savePerson">Save</button>
+  </div>
+</div>
+
+
+
+<!-- SETTINGS POPUP -->
+<div class="popup" id="settingsPopup">
+  <div class="popup-box">
+    <span class="close" data-popup="settingsPopup">&times;</span>
+    <h2>Settings</h2>
+
+    <input id="shopName" placeholder="Shop Owner Name">
+    <input id="shopNumber" placeholder="Phone Number">
+    <button id="saveShop">Save</button>
+
+    <div class="themes">
+      <h2>Select Theme</h2>
+      <div class="theme-colors">
+        <div class="blue"></div>    
+        <div class="orange"></div>    
+        <div class="yellow"></div>    
+        <div class="green"></div>     
+      </div>
+    </div>
+
+    <!-- How to Use Button -->
+    <button id="howToUseBtn">How to Use</button>
+
+    <div class="contact-box hide">
+      <div class="top-icons">
+        <div class="instagram">
+          <a href="https://www.instagram.com/m.raza_rao" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+        </div>
+        <div class="whatsapp">
+          <a href="https://wa.me/923239885813" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
+        </div>
+        <div class="mail">
+          <a href="mailto:raomuhammadraza11@gmail.com"><i class="fa fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="developer">
+        <h1>Developer's Notes</h1>
+        <p>Thanks for using UDHAR App</p>
+        <p>Stay Updated</p>
+        <p>Created by M.Raza</p>
+      </div>
+    </div>
+
+    <!-- RESET BUTTON -->
+    <button id="settingsResetBtn">Reset App</button>
+  </div>
+</div>
+
+<!-- HOW TO USE POPUP -->
+<div class="popup" id="howToUsePopup">
+  <div class="popup-box">
+    <span class="close" data-popup="howToUsePopup">&times;</span>
+    <h2>How to Use UDHAR App</h2>
+    <ul>
+      <li>💰 Add money to a person using the '+' button.</li>
+      <li>💸 Deduct money using the '-' button.</li>
+      <li>🕒 View all transactions using the History button.</li>
+      <li>👥 Manage persons and view their balances using Persons button.</li>
+      <li>🎨 Change theme color anytime from Settings.</li>
+      <li>⚙️ Reset app data using the Reset App button.</li>
+    </ul>
+  </div>
+</div>
+  
+</div>
+
+<!-- RESET CONFIRM POPUP -->
+<div class="popup" id="resetConfirmPopup">
+  <div class="popup-box">
+    <h2>Reset App?</h2>
+    <p>All data will be deleted.</p>
+    <div class="reset-buttons">
+      <button id="resetYes">Yes</button>
+      <button id="resetNo">No</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
