@@ -284,7 +284,7 @@ button:hover{
 .blue,
 .blue-theme .today-history-box,
 .blue-theme button{
-    background:linear-gradient(90deg,#3bf2f8,#06328a);
+    background:linear-gradient(90deg,#bae8ff,#015583);
 }
 
 .blue-theme .greeting-box{
@@ -293,11 +293,11 @@ button:hover{
 }
 
 .blue-theme .today-history-box{
-    background:linear-gradient(90deg,rgb(142,251,255),#0f435d);
+    background:linear-gradient(90deg,#bae8ff,#015583);
 }
 
 .blue-theme .footer i{
-    color:#0f859c;
+    color:#015583;
 }
 
 
